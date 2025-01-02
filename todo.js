@@ -2,17 +2,20 @@ class Todo {
     #title;
     #contents;
     #id;
+    #deadline;
 
-    constructor(title, contents, id) {
+    constructor(title, contents, id, deadline) {
         this.#title = title;
         this.#contents = contents;
         this.#id = id;
+        this.#deadline = deadline;
     }
 
     getTodo() {
         return {
             id: this.#id,
-            title: this.#title
+            title: this.#title,
+            deadline: this.#deadline,
         }
     }
 

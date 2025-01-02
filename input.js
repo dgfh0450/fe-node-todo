@@ -14,9 +14,10 @@ const Input = {
     },
 
     async insertTodo() {
-        const title = await rl.question('Title : ');
-        const contents = await rl.question('Contents : ');
-        return {title, contents};
+        const title = await rl.question('제목 : ');
+        const contents = await rl.question('내용 : ');
+        const deadline = await rl.question('마감일(YYYY-MM-DD) : ');
+        return {title, contents, deadline: new Date(deadline)};
     },
 
     async getTodoId() {

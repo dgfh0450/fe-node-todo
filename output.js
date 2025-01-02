@@ -14,6 +14,7 @@ const Output = {
         Output.printLine();
         console.log('투두리스트');
         console.log('id | title');
+        // const today = new Date();
         todoMap.values().forEach((todo)=> {
             const { id, title } = todo.getTodo();
             console.log(id, '|', title)

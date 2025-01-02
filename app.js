@@ -30,8 +30,8 @@ class App {
     }
 
     async insert() {
-        const {title, contents}= await Input.insertTodo();
-                setTodoMap({title, contents});
+        const {title, contents, deadline} = await Input.insertTodo();
+        setTodoMap({title, contents, deadline});
     }
     
     async detail() {

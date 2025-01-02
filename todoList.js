@@ -5,8 +5,8 @@ let index = 1;
 export const todoMap = new Map();
 
 export const setTodoMap = (todo) => {
-    const {title, contents} = todo;
-    const newTodo = new Todo(title, contents, index);
+    const {title, contents, deadline} = todo;
+    const newTodo = new Todo(title, contents, index, deadline);
     todoMap.set(index, newTodo);
     index++;
 };
